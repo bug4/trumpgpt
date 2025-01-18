@@ -17,7 +17,7 @@ const TrumpAIApp = () => {
  }, []);
 
  useEffect(() => {
-   setContractAddress("Soon on Pump.fun"); // Update with real contract address when ready
+   setContractAddress("X1NW4iFMNkjzAFZqK9PT95VzN3Cyw2nqAQ1Nq2Lpump"); // Update with real contract address when ready
  }, []);
 
  const handleEnter = () => {
@@ -187,7 +187,7 @@ const TrumpAIApp = () => {
              </button>
 
              <a
-               href="https://pump.fun"
+               href="https://pump.fun/coin/EX1NW4iFMNkjzAFZqK9PT95VzN3Cyw2nqAQ1Nq2Lpump"
                target="_blank"
                rel="noopener noreferrer"
                className="w-full inline-block text-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-xl font-bold hover:opacity-90 transition-colors"
