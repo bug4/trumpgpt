@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Send, Twitter } from 'lucide-react';
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import React, { useState, useEffect, useRef } from 'react'
+import { Send, Twitter } from 'lucide-react'
+import Particles from "react-tsparticles"
+import { loadFull } from "tsparticles"
 
 const TrumpAIApp = () => {
   const [showChat, setShowChat] = useState(false);
