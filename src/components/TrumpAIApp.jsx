@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { Send, Twitter } from 'lucide-react'
-import Particles from "react-tsparticles"
-import { loadFull } from "tsparticles"
+import React, { useState, useEffect, useRef } from 'react';
+import { Send, Twitter } from 'lucide-react';
 
 const TrumpAIApp = () => {
   const [showChat, setShowChat] = useState(false);
@@ -9,36 +7,6 @@ const TrumpAIApp = () => {
   const [input, setInput] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
   const messagesEndRef = useRef(null);
-
-  const particlesInit = async (main) => {
-    await loadFull(main);
-  };
-
-  const particlesOptions = {
-    particles: {
-      number: {
-        value: 100,
-        density: {
-          enable: true,
-          value_area: 800
-        }
-      },
-      color: {
-        value: "#ffffff"
-      },
-      size: {
-        value: 1
-      },
-      move: {
-        enable: true,
-        speed: 1,
-        direction: "none"
-      }
-    },
-    background: {
-      color: "#000000"
-    }
-  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -109,17 +77,12 @@ const TrumpAIApp = () => {
 
   if (!showChat) {
     return (
-      <div className="relative min-h-screen bg-black">
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          options={particlesOptions}
-          className="absolute inset-0"
-        />
-        <div className="relative z-10 min-h-screen flex flex-col items-center justify-center text-white text-center">
+      <div className="relative min-h-screen overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-animation"></div>
+        <div className="relative z-10 min-h-screen flex flex-col items-center justify-center text-white text-center p-4">
           <div className="mb-8">
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/intent/tweet"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-blue-500 px-4 py-2 rounded-full hover:bg-blue-600 transition-colors"
@@ -147,12 +110,7 @@ const TrumpAIApp = () => {
 
   return (
     <div className="min-h-screen bg-black">
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        options={particlesOptions}
-        className="absolute inset-0"
-      />
+      <div className="absolute inset-0 bg-gradient-animation"></div>
       <div className="relative z-10">
         {/* Header */}
         <div className="bg-gradient-to-r from-red-600 to-blue-700 text-white py-4 px-6 shadow-lg bg-opacity-90">
