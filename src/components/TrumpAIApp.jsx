@@ -119,7 +119,7 @@ const TrumpAIApp = () => {
         <div className="relative z-10 min-h-screen flex flex-col items-center justify-center text-white text-center">
           <div className="mb-8">
             <a
-              href="https://twitter.com/intent/tweet"
+              href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-blue-500 px-4 py-2 rounded-full hover:bg-blue-600 transition-colors"
