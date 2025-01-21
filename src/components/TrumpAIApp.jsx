@@ -16,7 +16,7 @@ const MagaTechApp = () => {
   }, []);
 
   useEffect(() => {
-    setContractAddress("SOON");
+    setContractAddress("soon");
   }, []);
 
   const handleEnter = () => {
@@ -153,6 +153,7 @@ const MagaTechApp = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-black to-purple-900">
       <div className="container mx-auto h-screen flex flex-col md:flex-row">
+        {/* Left Side - Logo and Info */}
         <div className="md:w-1/2 flex flex-col justify-center items-start p-8">
           <div className="flex flex-col items-start space-y-6 w-full max-w-md">
             <a
@@ -181,7 +182,7 @@ const MagaTechApp = () => {
               </button>
 
               <a
-                href="https://pump.fun/coin/"
+                href="https://pump.fun/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-block text-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-xl font-bold hover:opacity-90 transition-colors"
@@ -207,10 +208,12 @@ const MagaTechApp = () => {
           </div>
         </div>
 
-        <div className="md:w-1/2 p-8 flex flex-col">
+        {/* Right Side - Chat Terminal */}
+        <div className="md:w-1/2 p-8 flex flex-col h-screen">
           <div className={`flex-1 bg-black bg-opacity-50 rounded-lg border border-gray-800 transition-all duration-500 ${showChat ? 'opacity-100' : 'opacity-50 blur-sm'}`}>
-            <div className="h-full flex flex-col">
-              <div className="flex-1 overflow-y-auto p-6">
+            <div className="flex flex-col h-full">
+              {/* Messages Container */}
+              <div className="flex-1 overflow-y-auto p-6 max-h-[calc(100vh-250px)]">
                 {messages.map((message, index) => (
                   <div key={index} className={`mb-4 flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>
                     <div className={`max-w-[80%] rounded-lg p-3 ${
@@ -236,7 +239,8 @@ const MagaTechApp = () => {
                 <div ref={messagesEndRef} />
               </div>
 
-              <div className="border-t border-gray-800 p-4">
+              {/* Input Form */}
+              <div className="border-t border-gray-800 p-4 mt-auto">
                 <form onSubmit={handleSubmit} className="flex gap-2">
                   <input
                     type="text"
